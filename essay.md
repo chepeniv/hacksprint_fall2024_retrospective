@@ -75,9 +75,22 @@ generating a maze
 
 ## End Result
 
-a foundation for others to build their own maze games over
+given the limited time allotted what we ultimately were able to produce was an
+abstract core game which is basic and functional enough to serve as a foundation
+for others to build their own maze games over
 
 ### Structure
+
+frontend.py
+static/
+	assets/
+	data/
+	scripts/
+	styles/
+utility/
+	maze_gen.py
+templates/
+	homepage.py
 
 ### Demo / Experience
 
