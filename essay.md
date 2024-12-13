@@ -79,8 +79,8 @@ although we had the least impressive ui, the part that i found most unexpected
 was the positive reception and interest the algorithm and encoding, i had came
 up with, received from my peers and instructor. it was quite validating to see
 my hard work appreciated by people i respect. i ended up basically giving a
-short impromptu lecture on the way my algorithm works after the formal ceremony.
-that was cool.
+short impromptu lecture on the way my algorithm works after the formal
+presentation ceremony. that was cool.
 
 %% now, i'm just relieved that it's over, and feeling liberated to finally have
 %% time to my self, so that i can take care of my own life. the laundry has pilled
@@ -103,27 +103,20 @@ realistically deliver with the given timeframe.
 
 ## Technical
 
-on the technical side,
-%% tools
+on the technical side, the tools and workflow was fairly standard. firstly,
+we laid down the `html` structure, then defined the `css` classes to decorate
+our webpage, we then wrote the interactive logic with `jquery`. to then store
+and read data we used `json`. we implemented the backend with `flask`. and the
+whole maze generating algorithm was basically implemented with vanilla `python`.
+the only crucial import therein was `choice` from the `random` module. the
+rendering of it was then done with `javascript` and `css`. that was pretty much
+it.
 
-standard html, css, jquery, json, flask, and pretty much vanilla python
-
-the front end
-drawing a maze
-generating a maze
-
-### Structure
-
-frontend.py
-static/
-	assets/
-	data/
-	scripts/
-	styles/
-utility/
-	maze_gen.py
-templates/
-	homepage.py
+the overall structure ended up being composed of three core directories:
+`static/`, `utility/`, and `templates/`. within `static/` the subdirectories
+created were `assets/`, `data/`, `scripts/`, and `styles`. lastly the two python
+scripts which made everything possible are `frontend.py` for the flask server
+and `maze_gen.py` for the maze generating and encoding algorithms.
 
 ## End Result
 
@@ -131,9 +124,20 @@ given the limited time allotted what we ultimately were able to produce was an
 abstract core game which is basic and functional enough to serve as a foundation
 for others to build their own maze games over
 
-### Demo / Experience
+the basic experience is the player has control of a single block which they use
+to navigate the maze. they are able to collect items along the way and add them
+to their inventory. there is also an encounter game mechanic for players to
+interact with characters in the game. these encounters along with the inventory
+items can then affect the one of the two pre-built stats. once the player
+reaches the end of the matrix, the webpage reloads a new randomly generated
+matrix populated items and encounters, randomly as well, for the players to
+navigate and the game continues. right now the game goes on indefinitely, but
+an end-point can certainly be coded in at some point
 
 ## Lessons
+
+so what are the lessons learned here ? life lessons, i don't know, but
+technical ones i do.
 
 a browsers role between a user's machine and a server
 how a website has to be put together to fit the constraints given
@@ -141,9 +145,11 @@ how to generate a random maze, encode it, decode it, and draw it
 
 %% closing statement
 
-   x --  l --  r -- lr (y + x)
-  00 -- 01 -- 10 -- 11
-0000  0001  0010  0011 -- 00 y
-0100  0101  0110  0111 -- 01 t
-1000  1001  1010  1011 -- 10 b
-1100  1101  1110  1111 -- 11 tb
+%% encoding alt1
+%%    x --  l --  r -- lr (y + x)
+%%   00 -- 01 -- 10 -- 11
+%% 0000  0001  0010  0011 -- 00 y
+%% 0100  0101  0110  0111 -- 01 t
+%% 1000  1001  1010  1011 -- 10 b
+%% 1100  1101  1110  1111 -- 11 tb
+%% alt2 tblr instead of btrl
