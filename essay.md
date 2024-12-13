@@ -147,11 +147,17 @@ i have nothing significant to say, but for now, i'm just relieved that it's
 over. i feel liberated to finally have time to my self, so that i can take
 care of my own life as my laundry has actually pilled up...
 
-%% encoding alt1
-%%    x --  l --  r -- lr (y + x)
-%%   00 -- 01 -- 10 -- 11
-%% 0000  0001  0010  0011 -- 00 y
-%% 0100  0101  0110  0111 -- 01 t
-%% 1000  1001  1010  1011 -- 10 b
-%% 1100  1101  1110  1111 -- 11 tb
-%% alt2 tblr instead of btrl
+<!--
+
+encoding alt1
+
+   x --  l --  r -- lr (y + x)
+  00 -- 01 -- 10 -- 11
+0000  0001  0010  0011 -- 00 y
+0100  0101  0110  0111 -- 01 t
+1000  1001  1010  1011 -- 10 b
+1100  1101  1110  1111 -- 11 tb
+
+alt2 tblr instead of btrl
+
+-->
