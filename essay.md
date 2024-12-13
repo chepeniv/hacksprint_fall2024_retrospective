@@ -9,71 +9,101 @@ unpleasant interactions
 ## Background
 
 three times a year, new students in their second trimester at atlas, are tasked
-with their first open-ended group project, the hacksprint. a much mythologized
-undertaking which seems to have taken on the ritualistic aura of a
+with their first ever open-ended group project, the hacksprint. a much
+mythologized undertaking which seems to have taken on the ritualistic aura of a
 right-of-passage. the hacksprint is kicked off with the announcement of the
 one-word theme. the challenge is to then come up with a workable product idea
 matching the theme and actually deliver a working prototype in the span of one
 week. that's it, but boy is it challenging.
 
-the crew we assembled together was Malik Vance, Michael Balou, and I, Chepe.
-malik - story elements, theming, asset library, presentation, readme, and slides
-michael - maze gen algorithm research, presentation
-chepe - front end website logic, back end server, maze gen algorithm, and maze
-data handling
+## the Team
+
+the crew we assembled together was Malik Vance, Michael Ballou, and I, Chepe.
+even though we had some preliminary delegation of what our responsibilities were
+going to be, we more-or-less naturally fell into our roles. Michael carried out
+the research for the various algorithms we could use, as well as helping Malik
+finalize the presentation. Malik for his part developed the core story elements:
+the plot, lore, interactions, and dialogue. He built the asset library we were
+going to use. primarily, he took charge of putting together the presentation,
+writing out the README, and coming up with a user-interface theme for our the
+final product. I laid out the website structure, defined the various placeholder
+css themes, built the core game mechanics and logic, built the server. Most
+proudly, I developed the maze generating algorithm, as well as the encoding and
+decoding functions. naturally, since i was most familiar with the codebase, most
+all of the refactoring, restructuring, and debugging of our code base fell upon
+me as well.
 
 ## Description
 
-this is a maze game based on the plot that through some unfortunate happenstance
+we based our maze game on the plot that through some unfortunate happenstance
 you find yourself nearly wiped out of cash and with your essential belongings
 gone, you frantically run around lost trying to somehow gather enough cash to
 buy yourself a plane ticket back home.
 
-## Experience
+## the Experience
 
-### beginning
+the first thing we did was consider all the creative sources we could draw
+inspiration from that also fit the theme. in conjunction to that we also
+brainstormed the various kinds of projects we could take on. we made our choice
+through a mix-and-match process of these two aspects.
 
-drawing inspirations, brainstorming kinds of projects, laying out the structure,
-determining the technologies necessary, planning out our schedules, delegating
-responsibilities, gauging the mvp
+following that, we made the shift to then making a first approximation of what
+our minimum-viable-product (mvp) was going to look like, laying out the core
+structure, determining the necessary technologies, discussing schedules and
+availability, and partitioning responsibilities.
 
-### middle
+the overall development for me involved a lot of solitary all-night coding. it's
+really the way i like to work. unfortunately however, this means that there's a
+builtin delay in communication between me and my team. compounding to the
+difficulties, was the circumstance that my partners had various commitments
+outside of our project that had to be attended to. those primarily being their
+work and personal relationships. for better or worse, their resultant absence
+gave me the liberty to take initiative on my own without consultation.
 
-late night coding, partners out of town / on the road, busy with work,
-taking over other's responsibilities, fixing issues, reliance, having to
-dramatically restructure the project
+in the end, i really enjoyed the entire development process. going from
+composing the front-end, the interactive logic, setting up the back-end, writing
+the maze algorithm, and determining how to handle the generated data was really
+more enlightening than i initially thought. i really gained an appreciation for
+the way that the whole website delivery pipeline is put together.
 
-enjoyed putting together the website structure, setting up the core css classes,
-building the interactive logic, and creating the algorithms to handle the maze
+furthermore, i found hunting down bugs was also pretty engaging and quite
+revealing as to how the various technologies are implemented.
 
-getting swamped
+finally, the day came which we had to present our accomplishment. personally, i
+think i was fairly chill about it. nonetheless, i found it wise to do a few
+practice runs to gain some comfort, familiarity, and flow with what i would be
+presenting. i'd say our presentation itself was nothing noteworthy, but it did
+go well.
 
-hunting down bugs wasn't that bad
+although we had the least impressive ui, the part that i found most unexpected
+was the positive reception and interest the algorithm and encoding, i had came
+up with, received from my peers and instructor. it was quite validating to see
+my hard work appreciated by people i respect. i ended up basically giving a
+short impromptu lecture on the way my algorithm works after the formal ceremony.
+that was cool.
 
-### end
-
-interacting with peers, instructors, the audience
-
-putting together a last minute presentation without any planed monologue
-
-the unexpected interest others had and their positive reception to my work
-
-having to give a post presentation talk about the algorithm itself
-
-the relief of it being over
+%% now, i'm just relieved that it's over, and feeling liberated to finally have
+%% time to my self, so that i can take care of my own life. the laundry has pilled
+%% up...
 
 ## Challenges
 
-what the mvp was ultimately going to be
-from my perspective
-restructuring and refactoring
-people don't have enough time seemingly -- my sleep schedule
-technical and collaborative
-expectations, unforeseen issues
-css issues, having to use flask, technical idiosyncrasies
+besides any of the issues we had with coordinating with each other and our
+availability, the technical challenges we ran into were quite typical -- typos,
+various idiosyncrasies of the technologies we used, as well as working around
+how they handled the various data by default. mostly however, css was a
+paint-point here and there, and finding out that we really did _need_ to use a
+server was initially disappointing. this led to quite the drastic restructuring
+and refactoring in order to implement properly.
+
+perhaps the most challenging thing to get right, however, was actually
+determining what the mvp was going to be. as issues arose that would expand our
+expected workload, we had to consider where to scale back on what we could
+realistically deliver with the given timeframe.
 
 ## Technical
 
+on the technical side,
 %% tools
 
 standard html, css, jquery, json, flask, and pretty much vanilla python
