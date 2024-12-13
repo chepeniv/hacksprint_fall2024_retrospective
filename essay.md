@@ -82,9 +82,9 @@ my hard work appreciated by people i respect. i ended up basically giving a
 short impromptu lecture on the way my algorithm works after the formal
 presentation ceremony. that was cool.
 
-%% now, i'm just relieved that it's over, and feeling liberated to finally have
-%% time to my self, so that i can take care of my own life. the laundry has pilled
-%% up...
+for now, i'm just relieved that it's over, and feeling liberated to finally have
+time to my self, so that i can take care of my own life. the laundry has pilled
+up...
 
 ## Challenges
 
@@ -137,13 +137,14 @@ an end-point can certainly be coded in at some point
 ## Lessons
 
 so what are the lessons learned here ? life lessons, i don't know, but
-technical ones i do.
+technical ones i do. i gained an appreciation of the way a website service is
+setup between an end-user's machine, their browser, and the server, how a web
+service then has to be put together to then fit the constraints given be this
+framework, and lastly i learned how to generate random mazes, how encode and
+decode the data generated, how to optimize the various algorithms involved
+for both space and time, and how to render a maze in a browser.
 
-a browsers role between a user's machine and a server
-how a website has to be put together to fit the constraints given
-how to generate a random maze, encode it, decode it, and draw it
-
-%% closing statement
+## Closing Statement
 
 %% encoding alt1
 %%    x --  l --  r -- lr (y + x)
