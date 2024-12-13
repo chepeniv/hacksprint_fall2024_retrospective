@@ -147,17 +147,23 @@ i have nothing significant to say, but for now, i'm just relieved that it's
 over. i feel liberated to finally have time to my self, so that i can take
 care of my own life as my laundry has actually pilled up...
 
-<!--
+----
 
-encoding alt1
+### Addendum
 
-   x --  l --  r -- lr (y + x)
-  00 -- 01 -- 10 -- 11
-0000  0001  0010  0011 -- 00 y
-0100  0101  0110  0111 -- 01 t
-1000  1001  1010  1011 -- 10 b
-1100  1101  1110  1111 -- 11 tb
+given the encoding i had settled on to encode the blocks, a more efficient
+encoding perhaps would have been to use bytes instead of `int`'s.
 
-alt2 tblr instead of btrl
+```py
+	#   x --  l --  r -- lr   (y + x)
+[	#  00 -- 01 -- 10 -- 11
+	[0000, 0001, 0010, 0011], # 00 y
+	[0100, 0101, 0110, 0111], # 01 t
+	[1000, 1001, 1010, 1011], # 10 b
+	[1100, 1101, 1110, 1111]  # 11 tb
+]
+```
 
--->
+moreover, i could then reorder the code table to fit a more intuitive scheme. if
+so, this might require that i perform an inverse of indexing operation (summing
+instead of subtracting). i've yet to work out that part.
