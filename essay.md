@@ -153,7 +153,7 @@ care of my own life as my laundry has actually pilled up...
 
 given the encoding i had settled on for the wall configuration of the blocks, a
 more efficient alternative would have been to use bytes instead of `int`'s where
-each bit represents one of the wall's presence in order of `btlr`
+each bit represents one of the wall's presence in order of `btrl`
 
 ```python
 	#   x --  l --  r -- lr   (y + x)
