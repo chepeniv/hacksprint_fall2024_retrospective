@@ -89,7 +89,7 @@ besides any of the issues we had with coordinating with each other and our
 availability, the technical challenges we ran into were quite typical -- typos,
 various idiosyncrasies of the technologies we used, as well as working around
 how they handled the various data by default. mostly however, `css` was a
-paint-point here and there, and finding out that we really did _need_ to use a
+pain-point here and there, and finding out that we really did _need_ to use a
 server was initially disappointing. this led to quite the drastic restructuring
 and refactoring in order to implement properly.
 
@@ -151,10 +151,11 @@ care of my own life as my laundry has actually pilled up...
 
 ### Addendum
 
-given the encoding i had settled on to encode the blocks, a more efficient
-encoding perhaps would have been to use bytes instead of `int`'s.
+given the encoding i had settled on for the wall configuration of the blocks, a
+more efficient alternative would have been to use bytes instead of `int`'s where
+each bit represents one of the wall's presence in order of `btlr`
 
-```py
+```python
 	#   x --  l --  r -- lr   (y + x)
 [	#  00 -- 01 -- 10 -- 11
 	[0000, 0001, 0010, 0011], # 00 y
@@ -164,6 +165,21 @@ encoding perhaps would have been to use bytes instead of `int`'s.
 ]
 ```
 
-moreover, i could then reorder the code table to fit a more intuitive scheme. if
-so, this might require that i perform an inverse of indexing operation (summing
-instead of subtracting). i've yet to work out that part.
+however since the directional ordering isn't very natural we could modify our
+scheme further. if we reverse the elements of the code table, this allows us to
+achieve the more intuitive ordering of `tblr`
+
+```python
+	#   x --  l --  r -- lr   (y + x)
+[	#  00 -- 01 -- 10 -- 11
+	[1111, 1110, 1101, 1100]  # 11 tb
+	[1011, 1010, 1001, 1000], # 10 t
+	[0111, 0110, 0101, 0100], # 01 b
+	[0011, 0010, 0001, 0000], # 00 y
+]
+```
+
+finally, in order to then implement this encoding we would need to make few
+modifications to our algorithm. primarily, we would need to initiate each block
+with index (0, 0) rather than (3, 3) and to then perform the inverse indexing
+operation when generating the paths -- that is, to sum instead of subtract.
