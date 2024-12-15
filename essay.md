@@ -170,8 +170,8 @@ scheme further. if we reverse the elements of the code table, this allows us to
 achieve the more intuitive ordering of `tblr`
 
 ```python
-	#   x --  l --  r -- lr   (y + x)
-[	#  00 -- 01 -- 10 -- 11
+	#  lr --  l --  r --  x   (y + x)
+[	#  11 -- 10 -- 01 -- 00
 	[1111, 1110, 1101, 1100]  # 11 tb
 	[1011, 1010, 1001, 1000], # 10 t
 	[0111, 0110, 0101, 0100], # 01 b
